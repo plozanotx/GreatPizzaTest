@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DbPizza xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pizzas>
+    <Pizza>
+      <Id>1</Id>
+      <Name>Hawaiian</Name>
+    </Pizza>
+    <Pizza>
+      <Id>2</Id>
+      <Name>Peperoni</Name>
+    </Pizza>
+    <Pizza>
+      <Id>3</Id>
+      <Name>Irish</Name>
+    </Pizza>
+  </Pizzas>
+</DbPizza>
