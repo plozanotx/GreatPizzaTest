@@ -60,6 +60,21 @@ namespace GreatPizza.Core
             return results;
         }
 
+        public Topping GetTopping(string name)
+        {
+            Topping result = null;
+
+            using (DAL.DbContext db = new DAL.DbContext())
+            {
+                var topping = db.Toppings.FirstOrDefault(u => u.Name == name);
+
+                if (topping != null)
+                    result = new Topping() { Name = topping.Name };
+            }
+
+            return result;
+        }
+
         public bool AddTopping(Topping topping)
         {
             bool result = false;
@@ -103,6 +118,26 @@ namespace GreatPizza.Core
             return result;
         }
 
+        public bool DeleteToppingFromPizza(Topping topping, Pizza pizza)
+        {
+            bool result = false;
+
+            using (DAL.DbContext db = new DAL.DbContext())
+            {
+                var dbPizza = db.Pizzas.FirstOrDefault(u => u.Name.Equals(pizza.Name));
+
+                var dbTopping = db.Toppings.FirstOrDefault(u => u.PizzaId == dbPizza.Id);
+
+                if (dbTopping != null)
+                {
+                    db.Toppings.Remove(dbTopping);
+                    result = db.Save();
+                }
+            }
+
+            return result;
+        }
+
         public bool AddPizza(Pizza pizza)
         {
             bool result = false;
@@ -126,8 +161,13 @@ namespace GreatPizza.Core
 
                 if (dbPizza != null)
                 {
-                    db.Toppings.Add(new DAL.Topping() { Name = topping.Name, PizzaId = dbPizza.Id });
-                    result = db.Save();
+                    if (db.Toppings.Any(u => u.PizzaId == dbPizza.Id))
+                        result = false;
+                    else
+                    {
+                        db.Toppings.Add(new DAL.Topping() { Name = topping.Name, PizzaId = dbPizza.Id });
+                        result = db.Save();
+                    }
                 }
             }
 

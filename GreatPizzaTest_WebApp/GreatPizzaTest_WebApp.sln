@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatPizza.Models", "GreatP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatPizza.Core", "GreatPizza.Core\GreatPizza.Core.csproj", "{E46402F7-305F-4606-954F-070A0B1BAEE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GreatPizza.WebApp", "GreatPizza.WebApp\GreatPizza.WebApp.csproj", "{3881AAFB-89C2-47C2-B0F5-05F0BB75D559}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{E46402F7-305F-4606-954F-070A0B1BAEE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E46402F7-305F-4606-954F-070A0B1BAEE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E46402F7-305F-4606-954F-070A0B1BAEE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3881AAFB-89C2-47C2-B0F5-05F0BB75D559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3881AAFB-89C2-47C2-B0F5-05F0BB75D559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3881AAFB-89C2-47C2-B0F5-05F0BB75D559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3881AAFB-89C2-47C2-B0F5-05F0BB75D559}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

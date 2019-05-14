@@ -50,7 +50,7 @@ namespace GreatPizza.Dal
 
                 defaultToppings.Add(new Topping() { Id = 3, Name = "Peperoni", PizzaId = 2 });
 
-                defaultToppings.Add(new Topping() { Id = 4, Name = "Potatoes,", PizzaId = 3 });
+                defaultToppings.Add(new Topping() { Id = 4, Name = "Potatoes", PizzaId = 3 });
                 defaultToppings.Add(new Topping() { Id = 5, Name = "Cabbage", PizzaId = 3 });
 
 

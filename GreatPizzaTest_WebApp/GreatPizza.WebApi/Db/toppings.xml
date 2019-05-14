@@ -18,7 +18,7 @@
     </Topping>
     <Topping>
       <Id>4</Id>
-      <Name>Potatoes,</Name>
+      <Name>Potatoes</Name>
       <PizzaId>3</PizzaId>
     </Topping>
     <Topping>
