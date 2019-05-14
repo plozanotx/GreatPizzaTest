@@ -13,5 +13,9 @@
       <Id>3</Id>
       <Name>Irish</Name>
     </Pizza>
+    <Pizza>
+      <Id>4</Id>
+      <Name>Napolitan</Name>
+    </Pizza>
   </Pizzas>
 </DbPizza>

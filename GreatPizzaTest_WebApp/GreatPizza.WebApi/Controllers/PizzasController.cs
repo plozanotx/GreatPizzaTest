@@ -86,7 +86,7 @@ namespace GreatPizza.WebApi.Controllers
         }
 
         [HttpPost]
-        [Route("{pizzaName/toppingName}")]
+        [Route("{pizzaName}/{toppingName}")]
         public IHttpActionResult AddToppingToPizza(string pizzaName, string toppingName)
         {
             try
@@ -124,7 +124,7 @@ namespace GreatPizza.WebApi.Controllers
         }
 
         [HttpDelete]
-        [Route("{pizzaName/toppingName}")]
+        [Route("{pizzaName}/{toppingName}")]
         public IHttpActionResult DeleteToppingFromPizza(string pizzaName, string toppingName)
         {
             try
@@ -149,7 +149,7 @@ namespace GreatPizza.WebApi.Controllers
                     }
                 }
 
-                return Content(HttpStatusCode.OK, new { Code = (int)HttpStatusCode.Created, Message = "Topping successfully deleted" });
+                return Content(HttpStatusCode.OK, new { Code = (int)HttpStatusCode.OK, Message = "Topping successfully deleted" });
             }
             catch (Exception ex)
             {

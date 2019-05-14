@@ -4,7 +4,7 @@
     <Topping>
       <Id>1</Id>
       <Name>Ham</Name>
-      <PizzaId xsi:nil="true" />
+      <PizzaId>1</PizzaId>
     </Topping>
     <Topping>
       <Id>2</Id>
@@ -24,12 +24,7 @@
     <Topping>
       <Id>5</Id>
       <Name>Cabbage</Name>
-      <PizzaId xsi:nil="true" />
-    </Topping>
-    <Topping>
-      <Id>5</Id>
-      <Name>Bacon</Name>
-      <PizzaId>4</PizzaId>
+      <PizzaId>3</PizzaId>
     </Topping>
   </Toppings>
 </DbTopping>

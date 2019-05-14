@@ -6,14 +6,18 @@ namespace GreatPizza.Dal
 {
     public class DbContext : IDisposable
     {
-        IEnumerable<Pizza> _pizzas;
-        IEnumerable<Topping> _toppings;
+        List<Pizza> _pizzas;
+        List<Topping> _toppings;
 
         public List<Pizza> Pizzas
         {
             get
             {
-                return _pizzas.ToList();
+                return _pizzas;
+            }
+            set
+            {
+                _pizzas = value;
             }
         }
 
@@ -21,7 +25,11 @@ namespace GreatPizza.Dal
         {
             get
             {
-                return _toppings.ToList();
+                return _toppings;
+            }
+            set
+            {
+                _toppings = value;
             }
         }
 

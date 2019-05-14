@@ -12,18 +12,18 @@
         }
     </style>
 </head>
-<body ng-controller="mainController">
+<body ng-controller="mainController" ng-init="Init()">
     <table border="1" style="border-collapse:collapse">
         <thead>
             <tr>
                 <th colspan="3">All Pizzas ({{Pizzas.length}})</th>
-                <th>All Toppings ({{Toppings.length}})</th>
+                <th colspan="2">All Toppings ({{Toppings.length}})</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td class="sub-header" colspan="3">List</td>
-                <td class="sub-header"></td>
+                <td class="sub-header" colspan="2">List</td>
             </tr>
             <tr>
                 <td>
@@ -32,12 +32,40 @@
                     </select>
                 </td>
                 <td>
-                    <select ng-model="SelectedToppingName" multiple>
+                    <select ng-model="SelectedPizzaToppingName" multiple>
                         <option ng-repeat="t in PizzaToppings" value="{{t.Name}}">{{t.Name}}</option>
                     </select>
                 </td>
                 <td>
-                    <input type="button" ng-click="DeleteToppingFromPizza()" />
+                    <input type="button" ng-click="DeleteToppingFromPizza()" value="X" />
+                </td>
+                <td>
+                    <select ng-model="SelectedToppingName">
+                        <option ng-repeat="t in Toppings" value="{{t.Name}}">{{t.Name}}</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="button" ng-click="DeleteTopping()" value="X" />
+                </td>
+            </tr>
+            <tr>
+                <td class="sub-header" colspan="3">Add topping to {{SelectedPizzaName}}</td>
+                <td class="sub-header" colspan="2">Add</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <select ng-model="SelectedPizzaNewToppingName">
+                        <option ng-repeat="t in Toppings" value="{{t.Name}}">{{t.Name}}</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="button" ng-click="AddToppingToPizza()" value="+" />
+                </td>
+                <td>
+                    <input type="text" ng-model="NewToppingName" />
+                </td>
+                <td>
+                    <input type="button" ng-click="AddTopping()" value="+" />
                 </td>
             </tr>
         </tbody>
